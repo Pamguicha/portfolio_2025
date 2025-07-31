@@ -8,18 +8,23 @@ body{
   background-color: var(--primary-branding);
   font-family: "Roboto", sans-serif;
 }
+
+
+/*nav style*/
 nav{
     background-color: var(--secondary-branding);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     color: #FFFFFF;
     margin: 0 auto;
     height: 120px;
+    align-items: center;
 }
 .nav-container{
   list-style: none;
   display: flex;
-  gap:20px;
+  gap:30px;
   
 }
 .logo{
@@ -33,10 +38,18 @@ nav{
   font-size: 20px;
 }
 
+.nav-link:hover{
+  color: #FDFBD4;
+}
+.contact{
+  margin-right: 40px;
+}
+
+/*end nav style*/
+
 .hero-image{
   width: 650px;
   height: 700px;
-  margin-top: 100px;
 }
 
 .btn-learn-more{
@@ -47,7 +60,10 @@ nav{
   font-weight: bold;
   font-size: 18px;
   display: inline-block;
-
+  color: #FFFFFF;
+}
+.btn-learn-more:hover{
+background-color: var(--secondary-branding);
 }
 
 .main-container{
@@ -61,11 +77,18 @@ nav{
   margin: auto;
 }
 
+
+
 .title-name {
   font-size: 50px;
   font-weight: 900;
   color: var(--secondary-branding);
  
+}
+.paragraph-title,
+.before-title{
+  font-size: 1.5rem;
+  color: var(--secondary-branding);
 }
 
 .wave-section {
@@ -83,7 +106,10 @@ nav{
   width: 100%;
   height: auto;
 }
-
+.title-transparent{
+  color: var(--primary-branding);
+  font-size: 48px;
+}
 
 footer{
   
@@ -94,4 +120,102 @@ footer{
 
 
 }
+
+/*responsive version nav*/
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.hamburger {
+  width: 24px;
+  height: 2px;
+  background-color: white;
+  display: block;
+  position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: white;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+.hamburger::after {
+  top: 8px;
+}
+
+/* Hide nav-container by default on mobile */
+@media (max-width: 768px) {
+  .nav-container {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--secondary-branding);
+    padding: 1rem;
+    left: 0; 
+    padding: 1rem 2rem;
+    gap: 1rem;
+    z-index: 5;
+
+  }
+
+  .nav-container.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  nav {
+    position: relative;
+    align-items: center;
+  }
+/*rest of page responsive*/
+ .main-container {
+    flex-direction: column;
+    padding: 30px 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+  }
+
+  .container-main-text {
+    max-width: 100%;
+  }
+
+  .title-name {
+    font-size: 2rem;
+  }
+
+  .paragraph-title,
+  .before-title {
+    font-size: 1.1rem;
+  }
+
+  .btn-learn-more {
+    padding: 10px 40px;
+    font-size: 16px;
+  }
+}
+
 
