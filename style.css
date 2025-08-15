@@ -128,13 +128,14 @@ background-color: var(--secondary-branding);
 
 .images-about{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 
 }
 
 .about-description{
-  text-align: justify;
+text-align: justify;
 display: block;
 padding: 10px;
 line-height: 1.5;
@@ -142,6 +143,104 @@ margin-left: 50px;
 margin-right: 50px;
 }
 
+.certificates-title,
+.certificate-list{
+  color: var(--secondary-branding);
+}
+
+.certificate-name{
+  margin-bottom: 10px;
+}
+
+/*projects*/
+.header-projects{
+  color: var(--third-color-branding);
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 50px;
+}
+
+.paragraph-projects{
+  
+  text-align: center;
+  font-weight: 500;
+}
+
+.page-wrapper {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers each child horizontally */
+  gap: 20px; /* space between project blocks */
+}
+
+
+
+.container-project{
+ background-color: #FFFFFF;
+ display: flex;
+ gap: 20px;
+ padding: 20px;
+ width: 100%; 
+ box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+
+
+}
+.title-project{
+  color: var(--secondary-branding);
+ 
+}
+
+.image-project{
+  width: 300px;
+}
+
+.btn-checkProject{
+  background-color: var(--third-color-branding);
+  padding: 12px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  display: inline-block;
+  color: #FFFFFF;
+
+}
+
+
+.btn-checkProject:hover{
+background-color: var(--secondary-branding);
+}
+
+
+/*experience*/
+.title-experiencePage{
+  color: var(--third-color-branding);
+ text-align: center;
+  font-size: 2rem;
+  margin-top: 50px;
+}
+
+/* contact us*/
+
+.title-contact{
+  text-decoration-thickness: 3px;
+  color: var(--third-color-branding);
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.image-contactUs{
+  display: block;
+  margin: 0 auto;
+  
+   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.paragraph-contact{
+  padding: 20px;
+  text-align: center;
+}
 
 
 /*wave section*/
